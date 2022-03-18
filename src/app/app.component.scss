@@ -1,0 +1,48 @@
+.contenedor-principal {
+  background-color: red;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+}
+.contenedor-medio {
+    background-color: darkseagreen;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    .buscador{
+      background-color: lightpink;
+      display: inline-block;
+    }
+    .auxiliar-division{
+      display: grid;
+      grid-template-rows: 60% 40%; 
+      background-color: cadetblue;
+    }
+}
+.form-control{
+    width: 50%;
+    align-items: center;
+}
+.cabecera {
+  background-color: aqua;
+  height: 40px;
+  width: 100%;
+}
+.buscador {
+  background-color: beige;
+  
+}
+.scroll-arriba {
+  background-color: rebeccapurple;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.scroll-abajo {
+  background-color: burlywood;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.pie {
+  background-color: coral;
+  height: 20px;
+  width: 100%;
+}
