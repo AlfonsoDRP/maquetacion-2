@@ -1,20 +1,66 @@
 <div class="contenedor-principal">
-  <div class="cabecera">AAAAAAAAAAAAAAAA</div>
+  <div class="contenedor-cabecera">
+    <div class="contenido-cabecera">
+      <button class="btnmenu btn-sm">1</button>
+      <button class="btnmenu btn-sm">2</button>
+      <button class="btnmenu btn-sm">3</button>
+    </div>
+  </div>
   <div class="contenedor-medio">
-    <div class="buscador">
-      <div class="input-group input-group-sm mb-3">
-        <input type="text" class="form-control form-control-sm"/>
-        <div class="input-group-append">
-          <button class="btn btn-sm btn-outline-primary" type="button">
-            Buscar
-          </button>
+    <div class="contenedor-buscador">
+      <div class="contenido-buscador">
+        <div class="input-group input-group-sm mb-3">
+          <input type="text" class="form-control form-control-sm" />
+          <div class="input-group-append">
+            <button class="btn btn-sm btn-outline-primary" type="button">
+              Buscar</button
+            ><br />
+          </div>
+        </div>
+        <li *ngFor="let producto of productos">
+          {{ producto.marca_nombre }}
+        </li>
+      </div>
+    </div>
+    <div class="contenedor-division">
+      <div class="contenedor-scroll-arriba">
+        <div class="contenido-arriba">
+          <label for="">Detalles de producto</label>
+          <table class="tabla-detalles">
+            <tr>
+              <th>ID</th>
+              <th>Referencia</th>
+              <th>Codigo marca</th>
+              <th>Descripcion</th>
+              <th>Seccion</th>
+            </tr>
+            <tr *ngFor="let item of productos">
+              <td>{{ item.id }}</td>
+              <td>{{ item.referencia }}</td>
+              <td>{{ item.marca_codigo }}</td>
+              <td>{{ item.descripcion }}</td>
+              <td>{{ item.seccion }}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="contenedor-scroll-abajo">
+        <div class="contenido-abajo">
+          <label for="">Imagenes</label>
+          <li *ngFor="let item of productos">
+            <img
+              src="{{ item.imagen_producto }}"
+              class="imagenes"
+              alt="image"
+            />
+          </li>
         </div>
       </div>
     </div>
-    <div class="auxiliar-division">
-      <div class="scroll-arriba">AAAAAAAAAAAAAAAAAA</div>
-      <div class="scroll-abajo">AAAAAAAAAAAAAAAAAA</div>
+  </div>
+  <div class="contenedor-pie">
+    <div class="contenido-pie">
+      <p>Desarrolado en unas practicas</p>
     </div>
   </div>
-  <div class="pie">AAAAAAAAAAAAAAAA</div>
 </div>
