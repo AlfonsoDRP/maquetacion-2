@@ -25,13 +25,14 @@
     <div class="contenedor-division">
       <div class="contenedor-scroll-arriba">
         <div class="contenido-arriba">
+          <h3 class="display-6" ><u>Detalles del producto</u></h3>
           <img
             src="{{ producto_muestra.marca_logo }}"
             alt=""
             class="logo_empresa"
           /><br />
 
-          <label for="">Detalles de producto</label>
+          
           <table class="tabla-detalles">
             <tr>
               <th>ID</th>
@@ -52,7 +53,7 @@
       </div>
       <div class="contenedor-scroll-abajo">
         <div class="contenido-abajo">
-          <label for="">Imagen del producto</label><br />
+          <h3 class="display-6"><u>Imagen del producto</u></h3><br />
           <img
             src="{{ producto_muestra.imagen_producto }}"
             class="imagenes"
@@ -64,7 +65,7 @@
   </div>
   <div class="contenedor-pie">
     <div class="contenido-pie">
-      <code>{{ producto_muestra | json }}</code>
+      <code>Producido en unas practicas</code>
     </div>
   </div>
 </div>
