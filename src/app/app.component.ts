@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'maquetacion-2';
+
   contenidobuscador:string="";
   productos : any[] = [
     {
@@ -192,6 +193,11 @@ export class AppComponent {
         "imagen_producto": "https://static.catalogorecambios.com/img/productos-custom/RYM/RYMJT1858_01.jpg"
     }
     ];
+  producto_muestra = this.productos[0];
+  
+  prueba(id:any){
+    this.producto_muestra = this.productos[id];
+  }
   public searching: boolean = false;
   public showSearchResults(event: any): void {
     if (event.target.value.length >= 3) {

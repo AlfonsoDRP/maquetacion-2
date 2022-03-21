@@ -45,6 +45,10 @@
 -moz-box-shadow: -4px -2px 17px -3px rgba(0,0,0,0.75);
 box-shadow: -4px -2px 17px -3px rgba(0,0,0,0.75);
 }
+.lista-busqueda{
+  list-style: none;
+  border-bottom: 1px solid rgb(192, 192, 192);
+}
 .contenedor-scroll-arriba {
   background-color: white;
   height: 100%;
@@ -52,13 +56,23 @@ box-shadow: -4px -2px 17px -3px rgba(0,0,0,0.75);
   overflow-y: hidden;
   .contenido-arriba {
     background-color: white;
-    -webkit-box-shadow: -4px -2px 17px -3px rgba(0,0,0,0.75);
-    -moz-box-shadow: -4px -2px 17px -3px rgba(0,0,0,0.75);
-    box-shadow: -4px -2px 17px -3px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -4px -2px 17px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -4px -2px 17px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: -4px -2px 17px -3px rgba(0, 0, 0, 0.75);
     height: 100%;
     border-radius: 10px;
     padding: 10px;
     overflow-y: auto;
+  }
+  .logo_empresa{
+    width: 50%;
+    height: 35%;
+  }
+  table{
+      border: 1px solid rgb(192, 192, 192);
+      tr{
+          border: 1px solid rgb(192, 192, 192);
+      }
   }
 }
 .contenedor-scroll-abajo {
@@ -87,14 +101,9 @@ box-shadow: -4px -2px 17px -3px rgba(0,0,0,0.75);
       text-align: center;
   }
 }
+
 .imagenes {
-  width: 100px;
-  height: auto;
+  width: 50%;
+  height: 75%;
 }
-.tabla-detalles {
-  border: 2px solid black;
-  border-radius: 10px;
-}
-td {
-  border: 1px solid black;
-}
+

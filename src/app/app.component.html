@@ -9,36 +9,53 @@
           <input type="text" class="form-control form-control-sm" />
           <div class="input-group-append">
             <button class="btn btn-sm btn-outline-primary" type="button">
-              {{title}}</button
+              Buscar</button
             ><br />
           </div>
         </div>
-        <li *ngFor="let producto of productos" (click)="buscador($event)">
-          {{ producto.marca_nombre }}
+        <li *ngFor="let producto of productos; let productojson = index"  class="lista-busqueda" (click)="prueba(productojson)">
+          {{ producto.marca_nombre}}
         </li>
       </div>
     </div>
     <div class="contenedor-division">
       <div class="contenedor-scroll-arriba">
-        <app-tabla></app-tabla>
+        <div class="contenido-arriba">
+          <img src="{{producto_muestra.marca_logo}}" alt="" class="logo_empresa"><br>
+          <label for="">Detalles de producto</label>
+          <table class="tabla-detalles">
+            <tr>
+              <th>ID</th>
+              <th>Referencia</th>
+              <th>Codigo marca</th>
+              <th>Descripcion</th>
+              <th>Seccion</th>
+            </tr>
+            <tr>
+              <td>{{ producto_muestra.id }}</td>
+              <td>{{ producto_muestra.referencia }}</td>
+              <td>{{ producto_muestra.marca_codigo }}</td>
+              <td>{{ producto_muestra.descripcion }}</td>
+              <td>{{ producto_muestra.seccion }}</td>
+            </tr>
+          </table>
+        </div>
       </div>
       <div class="contenedor-scroll-abajo">
         <div class="contenido-abajo">
-          <label for="">Imagenes</label>
-          <li *ngFor="let item of productos">
+          <label for="">Imagen del producto</label><br>
             <img
-              src="{{ item.imagen_producto }}"
+              src="{{ producto_muestra.imagen_producto }}"
               class="imagenes"
               alt="image"
             />
-          </li>
         </div>
       </div>
     </div>
   </div>
   <div class="contenedor-pie">
     <div class="contenido-pie">
-      <p>Desarrolado en unas practicas</p>
+      <code>{{ producto_muestra | json }}</code>
     </div>
   </div>
 </div>
