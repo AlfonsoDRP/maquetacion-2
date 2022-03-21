@@ -11,5 +11,9 @@ export class CabeceraComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  login(){
+    var usuario = prompt("Introduzca su usuario");
+    var contraseña = prompt ("Introduzca su contraseña");
+    alert("Bienvenido "+usuario);
+  }
 }

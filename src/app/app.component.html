@@ -13,15 +13,24 @@
             ><br />
           </div>
         </div>
-        <li *ngFor="let producto of productos; let productojson = index"  class="lista-busqueda" (click)="prueba(productojson)">
-          {{ producto.marca_nombre}}
+        <li
+          *ngFor="let producto of productos; let productojson = index"
+          class="lista-busqueda"
+          (click)="prueba(productojson)"
+        >
+          {{ producto.marca_nombre }}
         </li>
       </div>
     </div>
     <div class="contenedor-division">
       <div class="contenedor-scroll-arriba">
         <div class="contenido-arriba">
-          <img src="{{producto_muestra.marca_logo}}" alt="" class="logo_empresa"><br>
+          <img
+            src="{{ producto_muestra.marca_logo }}"
+            alt=""
+            class="logo_empresa"
+          /><br />
+
           <label for="">Detalles de producto</label>
           <table class="tabla-detalles">
             <tr>
@@ -43,12 +52,12 @@
       </div>
       <div class="contenedor-scroll-abajo">
         <div class="contenido-abajo">
-          <label for="">Imagen del producto</label><br>
-            <img
-              src="{{ producto_muestra.imagen_producto }}"
-              class="imagenes"
-              alt="image"
-            />
+          <label for="">Imagen del producto</label><br />
+          <img
+            src="{{ producto_muestra.imagen_producto }}"
+            class="imagenes"
+            alt="image"
+          />
         </div>
       </div>
     </div>
