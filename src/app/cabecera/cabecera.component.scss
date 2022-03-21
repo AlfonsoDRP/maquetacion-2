@@ -1,0 +1,29 @@
+.contenido-cabecera {
+  height: 100%;
+  h1{
+      font-size: 2rem;
+      position: absolute;
+  }
+  .btnmenu {
+    height: 40px;
+    width: 40px;
+    margin-right: 20px;
+  }
+}
+/*COMUN DE TODAS LAS IMAGENES DE LA CABECERA*/
+.img-cabecera{
+  height: 40px;
+  width: 40px;
+}
+.img-usuario{
+    position: absolute;
+    right: 0;
+}
+.img-herramienta{
+    position: absolute;
+    right: 40px;
+}
+.img-carrito{
+    position: absolute;
+    right: 80px;
+}

@@ -1,10 +1,6 @@
 <div class="contenedor-principal">
   <div class="contenedor-cabecera">
-    <div class="contenido-cabecera">
-      <button class="btnmenu btn-sm">1</button>
-      <button class="btnmenu btn-sm">2</button>
-      <button class="btnmenu btn-sm">3</button>
-    </div>
+    <app-cabecera></app-cabecera>
   </div>
   <div class="contenedor-medio">
     <div class="contenedor-buscador">
@@ -13,36 +9,18 @@
           <input type="text" class="form-control form-control-sm" />
           <div class="input-group-append">
             <button class="btn btn-sm btn-outline-primary" type="button">
-              Buscar</button
+              {{title}}</button
             ><br />
           </div>
         </div>
-        <li *ngFor="let producto of productos">
+        <li *ngFor="let producto of productos" (click)="buscador($event)">
           {{ producto.marca_nombre }}
         </li>
       </div>
     </div>
     <div class="contenedor-division">
       <div class="contenedor-scroll-arriba">
-        <div class="contenido-arriba">
-          <label for="">Detalles de producto</label>
-          <table class="tabla-detalles">
-            <tr>
-              <th>ID</th>
-              <th>Referencia</th>
-              <th>Codigo marca</th>
-              <th>Descripcion</th>
-              <th>Seccion</th>
-            </tr>
-            <tr *ngFor="let item of productos">
-              <td>{{ item.id }}</td>
-              <td>{{ item.referencia }}</td>
-              <td>{{ item.marca_codigo }}</td>
-              <td>{{ item.descripcion }}</td>
-              <td>{{ item.seccion }}</td>
-            </tr>
-          </table>
-        </div>
+        <app-tabla></app-tabla>
       </div>
       <div class="contenedor-scroll-abajo">
         <div class="contenido-abajo">
